@@ -1,0 +1,8 @@
+<?php
+/**
+ * Local phpPgAdmin configuration.  
+ * Copy this file as local.config.inc.php to override global configurations
+ * local.config.inc.php is not versioned, so it affects only the local machine.
+ * Here you put new values to $conf variable elements
+ */
+?>
