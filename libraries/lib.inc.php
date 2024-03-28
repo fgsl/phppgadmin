@@ -20,7 +20,7 @@
 
 	// PostgreSQL and PHP minimum version
 	$postgresqlMinVer = '7.4';
-	$phpMinVer = '7.2';
+	$phpMinVer = '8.1';
 
 	// Check the version of PHP
 	if (version_compare(phpversion(), $phpMinVer, '<'))
@@ -30,6 +30,9 @@
 	if (file_exists('conf/config.inc.php')) {
 		$conf = array();
 		include('./conf/config.inc.php');
+		if (file_exists('conf/local.config.inc.php')){
+			include('./conf/local.config.inc.php');
+		}
 	}
 	else {
 		echo 'Configuration error: Copy conf/config.inc.php-dist to conf/config.inc.php and edit appropriately.';
